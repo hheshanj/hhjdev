@@ -730,6 +730,7 @@ section,
   background-color: #e6e6e6;
   box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1);
   padding: 20px;
+  border-radius: 20px;
 }
 
 .about .skills-content h5 {
@@ -801,9 +802,10 @@ section,
 }
 
 .quote p {
-  font-size: 30px;
+  font-size: 10px;
+  text-align: left;
   font-style: italic;
-  margin-top: 50px;
+  margin-top: 40px;
   color: #000000;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
   
@@ -812,7 +814,7 @@ section,
 .horizontal-list {
   li {
     display: inline-block; /* Or inline */
-    padding: 10px; /* Add some spacing for better readability */
+    padding: 15px; /* Add some spacing for better readability */
   }
 }
 
@@ -866,7 +868,7 @@ section,
 @media (min-width: 1365px) {
   .services .service-item:hover {
     transform: translateY(-40px);
-    border-color: #000000;
+    border-color: var(--accent-color);
   }
 
   .services .service-item:hover h3 {
@@ -1143,8 +1145,9 @@ section,
 .contact .info-wrap {
   background-color: var(--surface-color);
   box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
-  padding: 30px;
-  margin-bottom: 30px;
+  padding: 10px;
+  margin-bottom: 100px;
+  border-radius: 50px;
 }
 
 .contact .info-item i {
