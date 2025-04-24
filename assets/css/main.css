@@ -1,10 +1,10 @@
 /**
-* Template Name: DevFolio
-* Template URL: https://bootstrapmade.com/devfolio-bootstrap-portfolio-html-template/
-* Updated: Aug 07 2024 with Bootstrap v5.3.3
-* Author: BootstrapMade.com
-* License: https://bootstrapmade.com/license/
-*/
+ * Template Name: DevFolio
+ * Template URL: https://bootstrapmade.com/devfolio-bootstrap-portfolio-html-template/
+ * Updated: Aug 07 2024 with Bootstrap v5.3.3
+ * Author: BootstrapMade.com
+ * License: https://bootstrapmade.com/license/
+ */
 
 /*--------------------------------------------------------------
 # Font & Color Variables
@@ -12,33 +12,30 @@
 --------------------------------------------------------------*/
 /* Fonts */
 :root {
-  --default-font: "Roboto",  system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-  --heading-font: "Raleway",  sans-serif;
-  --nav-font: "Poppins",  sans-serif;
+  --default-font: "Roboto", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --heading-font: "Raleway", sans-serif;
+  --nav-font: "Poppins", sans-serif;
+
+  /* Global Colors */
+  --background-color: #040404;
+  --default-color: #4e4e4e;
+  --heading-color: #02000a;
+  --accent-color: #0078ff;
+  --surface-color: #ffffff;
+  --contrast-color: #ffffff;
+
+  /* Nav Menu Colors */
+  --nav-color: #ffffff;
+  --nav-hover-color: #ffffff;
+  --nav-mobile-background-color: #ffffff;
+  --nav-dropdown-background-color: #ffffff;
+  --nav-dropdown-color: #212529;
+  --nav-dropdown-hover-color: #0078ff;
+
+  scroll-behavior: smooth;
 }
 
-/* Global Colors - The following color variables are used throughout the website. Updating them here will change the color scheme of the entire website */
-:root { 
-  --background-color: #040404; /* Background color for the entire website, including individual sections */
-  --default-color: #4e4e4e; /* Default color used for the majority of the text content across the entire website */
-  --heading-color: #02000a; /* Color for headings, subheadings and title throughout the website */
-  --accent-color: #0078ff; /* Accent color that represents your brand on the website. It's used for buttons, links, and other elements that need to stand out */
-  --surface-color: #ffffff; /* The surface color is used as a background of boxed elements within sections, such as cards, icon boxes, or other elements that require a visual separation from the global background. */
-  --contrast-color: #ffffff; /* Contrast color for text, ensuring readability against backgrounds of accent, heading, or default colors. */
-}
-
-/* Nav Menu Colors - The following color variables are used specifically for the navigation menu. They are separate from the global colors to allow for more customization options */
-:root {
-  --nav-color: #ffffff;  /* The default color of the main navmenu links */
-  --nav-hover-color: #ffffff; /* Applied to main navmenu links when they are hovered over or active */
-  --nav-mobile-background-color: #ffffff; /* Used as the background color for mobile navigation menu */
-  --nav-dropdown-background-color: #ffffff; /* Used as the background color for dropdown items that appear when hovering over primary navigation items */
-  --nav-dropdown-color: #212529; /* Used for navigation links of the dropdown items in the navigation menu. */
-  --nav-dropdown-hover-color: #0078ff; /* Similar to --nav-hover-color, this color is applied to dropdown navigation links when they are hovered over. */
-}
-
-/* Color Presets - These classes override global colors when applied to any section or element, providing reuse of the sam color scheme. */
-
+/* Color Presets */
 .light-background {
   --background-color: #f9f9f9;
   --surface-color: #ffffff;
@@ -59,11 +56,6 @@
   --accent-color: #ffffff;
   --surface-color: #3393ff;
   --contrast-color: #ffffff;
-}
-
-/* Smooth scroll */
-:root {
-  scroll-behavior: smooth;
 }
 
 /*--------------------------------------------------------------
@@ -96,8 +88,7 @@ h6 {
   font-family: var(--heading-font);
 }
 
-/* PHP Email Form Messages
-------------------------------*/
+/* PHP Email Form Messages */
 .php-email-form .error-message {
   display: none;
   background: #df1529;
@@ -203,12 +194,12 @@ h6 {
     position: relative;
   }
 
-  .navmenu>ul>li {
+  .navmenu > ul > li {
     white-space: nowrap;
     padding: 15px 14px;
   }
 
-  .navmenu>ul>li:last-child {
+  .navmenu > ul > li:last-child {
     padding-right: 0;
   }
 
@@ -235,7 +226,7 @@ h6 {
     transition: 0.3s;
   }
 
-  .navmenu>ul>li>a:before {
+  .navmenu > ul > li > a:before {
     content: "";
     position: absolute;
     width: 100%;
@@ -249,13 +240,13 @@ h6 {
   }
 
   .navmenu a:hover:before,
-  .navmenu li:hover>a:before,
+  .navmenu li:hover > a:before,
   .navmenu .active:before {
     visibility: visible;
     width: 100%;
   }
 
-  .navmenu li:hover>a,
+  .navmenu li:hover > a,
   .navmenu .active,
   .navmenu .active:focus {
     color: var(--nav-hover-color);
@@ -294,11 +285,11 @@ h6 {
 
   .navmenu .dropdown ul a:hover,
   .navmenu .dropdown ul .active:hover,
-  .navmenu .dropdown ul li:hover>a {
+  .navmenu .dropdown ul li:hover > a {
     color: var(--nav-dropdown-hover-color);
   }
 
-  .navmenu .dropdown:hover>ul {
+  .navmenu .dropdown:hover > ul {
     opacity: 1;
     top: 100%;
     visibility: visible;
@@ -310,7 +301,7 @@ h6 {
     visibility: hidden;
   }
 
-  .navmenu .dropdown .dropdown:hover>ul {
+  .navmenu .dropdown .dropdown:hover > ul {
     opacity: 1;
     top: 0;
     left: -100%;
@@ -412,7 +403,7 @@ h6 {
     background-color: rgba(33, 37, 41, 0.1);
   }
 
-  .navmenu .dropdown>.dropdown-active {
+  .navmenu .dropdown > .dropdown-active {
     display: block;
     background-color: rgba(33, 37, 41, 0.03);
   }
@@ -439,7 +430,7 @@ h6 {
     transition: 0.3s;
   }
 
-  .mobile-nav-active .navmenu>ul {
+  .mobile-nav-active .navmenu > ul {
     display: block;
   }
 }
@@ -509,7 +500,7 @@ h6 {
   position: fixed;
   top: calc(50% - 30px);
   left: calc(50% - 30px);
-  border: 6px solid #ffffff;
+  border: 6px solid var(--accent-color);
   border-color: var(--accent-color) transparent var(--accent-color) transparent;
   border-radius: 50%;
   width: 60px;
@@ -596,11 +587,11 @@ h6 {
   font-weight: 400;
 }
 
-.page-title .breadcrumbs ol li+li {
+.page-title .breadcrumbs ol li + li {
   padding-left: 10px;
 }
 
-.page-title .breadcrumbs ol li+li::before {
+.page-title .breadcrumbs ol li + li::before {
   content: "/";
   display: inline-block;
   padding-right: 10px;
@@ -620,7 +611,6 @@ section,
 }
 
 @media (max-width: 1199px) {
-
   section,
   .section {
     scroll-margin-top: 76px;
@@ -793,12 +783,11 @@ section,
   right: 27px;
   bottom: 0;
   margin: auto;
-  
 }
 
 .about .about-me p {
   font-size: 20px;
-  text-align: justify ;
+  text-align: justify;
 }
 
 .quote p {
@@ -807,15 +796,12 @@ section,
   font-style: italic;
   margin-top: 40px;
   color: #000000;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
-  
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-.horizontal-list {
-  li {
-    display: inline-block; /* Or inline */
-    padding: 15px; /* Add some spacing for better readability */
-  }
+.horizontal-list li {
+  display: inline-block; /* Or inline */
+  padding: 15px; /* Add some spacing for better readability */
 }
 
 .horizontal-list img {
@@ -823,12 +809,11 @@ section,
   width: 40px;
 }
 
-
 /*--------------------------------------------------------------
 # Services Section
 --------------------------------------------------------------*/
 .services .service-item {
-  background-color:#e6e6e6;
+  background-color: #e6e6e6;
   box-shadow: 0px 5px 90px 0px rgba(0, 0, 0, 0.1);
   padding: 60px 30px;
   transition: all ease-in-out 0.3s;
@@ -1137,8 +1122,6 @@ section,
   color: var(--accent-color);
 }
 
-
-
 /*--------------------------------------------------------------
 # Contact Section
 --------------------------------------------------------------*/
@@ -1230,7 +1213,6 @@ section,
   background: color-mix(in srgb, var(--accent-color), transparent 20%);
 }
 
-
 /*--------------------------------------------------------------
 # Service Details Section
 --------------------------------------------------------------*/
@@ -1297,12 +1279,9 @@ section,
   color: var(--accent-color);
 }
 
-.banner i {
-
-
-}
-
-
+/*--------------------------------------------------------------
+# Miscellaneous
+--------------------------------------------------------------*/
 .card {
   background-image: url('path-to-image/image.png');
   background-size: cover;
@@ -1314,5 +1293,4 @@ section,
 
 .rounded-image {
   border-radius: 20px;
- 
 }
