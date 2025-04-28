@@ -19,6 +19,7 @@
   <meta name="twitter:description" content="Cyber Security undergrad, developer, and digital creative. Explore Heshan Jayakody’s portfolio of web projects, design work, and more.">
   <meta name="twitter:image" content="https://hheshanj.github.io/hhjdev/assets/img/hhjbackground.png">
 
+  <!-- Favicon and Apple Touch Icon -->
   <link href="assets/img/letter-h.png" rel="icon">
   <link href="assets/img/letter-h.png" rel="apple-touch-icon">
 
@@ -36,11 +37,13 @@
 
   <!-- Main CSS File -->
   <link href="assets/css/main.css" rel="stylesheet">
+
   <style>
-    
+    /* Inline styles moved here for better organization */
     .quote p {
       font-style: italic;
       font-family: "Raleway", sans-serif;
+      font-size: 30px;
     }
     .card {
       transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -49,17 +52,20 @@
       transform: scale(1.05);
       box-shadow: 0 0 20px rgba(0, 255, 255, 0.2);
     }
+    .img-fluid.rounded-corners {
+      border-radius: 20px;
+    }
   </style>
 
 </head>
 
 <body class="index-page">
 
+  <!-- Header Section -->
   <header id="header" class="header d-flex align-items-center sticky-top">
     <div class="container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
 
       <a href="index.html" class="logo d-flex align-items-center">
-       
         <h1 class="sitename">HHJ<h4><sub>dev</sub></h4></h1>
       </a>
 
@@ -69,7 +75,7 @@
           <li><a href="#Projects">Projects</a></li>
           <li><a href="#about">About</a></li>
           <li><a href="#contact">Contact</a></li>
-          <li><a href="https://github.com/hheshanj" target="_blank"><img src="assets/img/icons8-github-50.png" width="20" height="20">&nbsp;Github</a></li>
+          <li><a href="https://github.com/hheshanj" target="_blank"><img src="assets/img/icons8-github-50.png" width="20" height="20" alt="GitHub Icon">&nbsp;Github</a></li>
         </ul>
         <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
       </nav>
@@ -82,7 +88,7 @@
     <!-- Hero Section -->
     <section id="hero" class="hero section dark-background">
 
-      <img src="assets/img/homepage.png" alt="" data-aos="fade-down" data-aos-delay="100">
+      <img src="assets/img/homepage.png" alt="Homepage image" data-aos="fade-down" data-aos-delay="100">
 
       <div class="container d-flex flex-column align-items-center justify-content-center text-center" data-aos="fade-up" data-aos-delay="100">
         <h2>I am Heshan Jayakody</h2>
@@ -92,7 +98,7 @@
     </section><!-- /Hero Section -->
 
 
-    <!-- Services Section -->
+    <!-- Projects Section -->
     <section id="Projects" class="services section">
 
       <!-- Section Title -->
@@ -108,7 +114,7 @@
           <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
             <div class="service-item  position-relative">
               <div class="card">
-                <img src="assets/img/Projects/logo.jpeg" class="rounded-image">
+                <img src="assets/img/Projects/logo.jpeg" class="rounded-image" alt="Project logo">
               </div>
               <a href="highwaltonestate.com" class="stretched-link" target="_blank">
                 <h3>Estate Website-Highwalton</h3>
@@ -145,10 +151,11 @@
 
       </div>
 
-    </section><!-- /Services Section -->
+    </section><!-- /Projects Section -->
 
 
-      <section id="about" class="about section">
+    <!-- About Section -->
+    <section id="about" class="about section">
 
       <div class="container" data-aos="fade-up" data-aos-delay="100">
 
@@ -157,10 +164,10 @@
 
             <div class="row justify-content-between gy-4">
               <div class="col-lg-5">
-                <img src="assets/img/me/FB_IMG_1742327195594.jpg" class="img-fluid" style="border-radius: 20px;" alt="" data-aos="fade-up">
+                <img src="assets/img/me/FB_IMG_1742327195594.jpg" class="img-fluid rounded-corners" alt="Heshan Jayakody" data-aos="fade-up">
               </div>
               <div class="col-lg-7 quote">
-                <p style="font-size: 30px;"data-aos="fade-in" data-aos-delay="1000">"At the end of the end of day, 
+                <p data-aos="fade-in" data-aos-delay="1000">"At the end of the end of day, 
                   it's always that one semi-colon 
                   that breaks you down"</p>
               </div>
@@ -169,12 +176,12 @@
             <div class="skills-content skills-animation">
 
               <br>
-              <h5>Techonologies I use</h5>
+              <h5>Technologies I use</h5>
               <ul class="horizontal-list">
-                <li><img src="assets/img/html.png">HTML</li>
-                <li><img src="assets/img/css-3.png">CSS</li>
-                <li><img src="assets/img/python.png"> Python</li>
-                <li><img src="assets/img/java-script.png">JavaScript</li>
+                <li><img src="assets/img/html.png" alt="HTML logo">HTML</li>
+                <li><img src="assets/img/css-3.png" alt="CSS logo">CSS</li>
+                <li><img src="assets/img/python.png" alt="Python logo"> Python</li>
+                <li><img src="assets/img/java-script.png" alt="JavaScript logo">JavaScript</li>
               </ul>
               
             </div>
@@ -182,7 +189,7 @@
 
           <div class="col-md-6">
             <div class="about-me">
-              <h4 style="text-align: center;"data-aos="fade-up" data-aos-delay="100">About me.</h4>
+              <h4 style="text-align: center;" data-aos="fade-up" data-aos-delay="100">About me.</h4>
               <p>
                 Hey, I’m Heshan—an undergrad majoring in Cyber Security with a passion for building websites and exploring the ever-evolving world of tech. I enjoy solving problems, breaking things (ethically, of course), and learning something new every day.</p>
               <p>
@@ -198,15 +205,6 @@ Talk is cheap, code is rich. 🚀
       </div>
 
     </section><!-- /About Section -->
-
-
-
-
-
-
-
-
-
     
     <!-- Contact Section -->
     <section id="contact" class="contact section">
@@ -231,7 +229,7 @@ Talk is cheap, code is rich. 🚀
 
             <div class="col-lg-4">
               <div class="info-item d-flex align-items-center">
-              <A href="https://www.instagram.com/heshan_jj/"><i class="bi bi-instagram flex-shrink-0"></i>
+              <a href="https://www.instagram.com/heshan_jj/"><i class="bi bi-instagram flex-shrink-0"></i>
                 <div>
                   <h3>@heshan_jj</h3></a>
                   </div>
@@ -250,8 +248,13 @@ Talk is cheap, code is rich. 🚀
           </div>
         </div>
 
-      
+      </div>
 
+    </section><!-- /Contact Section -->
+
+  </main>
+
+  <!-- Footer Section -->
   <footer id="footer" class="footer accent-background">
 
     <div class="container">
@@ -286,4 +289,3 @@ Talk is cheap, code is rich. 🚀
 </body>
 
 </html>
-
