@@ -600,6 +600,15 @@ section,
   }
 }
 
+ .github-link:hover:before,
+.github-link.active:before {
+  background-color: #007bff; /* Blue underline */
+  visibility: visible;
+  width: 100%;
+}
+
+}
+
 /*--------------------------------------------------------------
 # Global Section Titles
 --------------------------------------------------------------*/
@@ -852,7 +861,7 @@ section,
   box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
   padding: 10px;
   margin-bottom: 100px;
-  border-radius: 50px;
+  border-radius: 30px;
 }
 
 .contact .info-item i {
