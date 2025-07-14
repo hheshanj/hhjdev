@@ -708,11 +708,20 @@ section,
 /*--------------------------------------------------------------
 # About Section
 --------------------------------------------------------------*/
+
+.aboutme 
+{
+  text-align: center;
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 40px;
+  color: white;
+}
 .about .container {
   background-color: #e6e6e6;
   box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1);
   padding: 20px;
-  border-radius: 0px;
+  border-radius: 5px;
 }
 
 .about .skills-content h5 {
@@ -809,7 +818,7 @@ section,
   box-shadow: 0px 5px 90px 0px rgba(0, 0, 0, 0.1);
   padding: 60px 30px;
   transition: all ease-in-out 0.3s;
-  border-radius: 18px;
+  border-radius: 5px;
   border-bottom: 10px solid #e6e6e6;
   height: 100%;
 }
@@ -861,7 +870,7 @@ section,
   box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
   padding: 30px;
   margin-bottom: 100px;
-  border-radius: 0px;
+  border-radius: 5px;
 }
 
 .contact .info-item i {
