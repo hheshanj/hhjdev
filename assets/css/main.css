@@ -52,6 +52,11 @@ body {
   color: var(--default-color);
   background-color: var(--background-color);
   font-family: var(--default-font);
+  background-image: url('assets/img/pattern.jpg');
+  background-repeat: repeat;
+  background-size: auto;
+  background-position: top left;
+  margin: 0;
 }
 
 a {
@@ -606,8 +611,13 @@ section,
   visibility: visible;
   width: 100%;
 }
-
+.blog-link:hover:before,
+.blog-link.active:before {
+  background-color: #fca400; /* Beige underline */
+  visibility: visible;
+  width: 100%;
 }
+
 
 /*--------------------------------------------------------------
 # Global Section Titles
@@ -668,7 +678,7 @@ section,
 
 .hero:before {
   content: "";
-  background: color-mix(in srgb, var(--background-color), transparent 30%);
+  background: color-mix(in srgb, var(--background-color), transparent 50%);
   position: absolute;
   inset: 0;
   z-index: 2;
