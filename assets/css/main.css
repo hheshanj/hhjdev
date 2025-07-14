@@ -712,7 +712,7 @@ section,
   background-color: #e6e6e6;
   box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1);
   padding: 20px;
-  border-radius: 20px;
+  border-radius: 0px;
 }
 
 .about .skills-content h5 {
@@ -859,9 +859,9 @@ section,
 .contact .info-wrap {
   background-color: var(--surface-color);
   box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
-  padding: 10px;
+  padding: 30px;
   margin-bottom: 100px;
-  border-radius: 30px;
+  border-radius: 0px;
 }
 
 .contact .info-item i {
