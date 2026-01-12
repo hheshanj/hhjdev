@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>hhjDEV</title>
+    <title>hhjdev</title>
     
     <!-- AOS Library -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
@@ -53,6 +53,7 @@
             <li><a href="#contact">Contact</a></li>
         </ul>
         <a href="https://github.com/hheshanj" class="nav-cta"> <i class="fab fa-github"></i> Github</a>
+
         <div class="menu-toggle">
             <span></span>
             <span></span>
@@ -491,13 +492,13 @@
                 <div class="social-links">
                     <a href="https://github.com/hheshanj" class="social-link"><i class="fab fa-github"></i></a>
                    <a href="https://www.linkedin.com/in/heshan-jayakody-6a2a71270/" class="social-link"><i class="fab fa-linkedin-in"></i></a>
-                    <a href="#" class="social-link"><i class="fab fa-blogger"></i></a>
+                    <a href="https://medium.com/@jayakodyheshan" class="social-link"><i class="fab fa-medium"></i></a>
                 </div>
             </div>
             
             <div class="contact-form-wrapper" data-aos="fade-left" data-aos-delay="400">
-                <form class="contact-form" id="contact-form">
-                    <div class="form-row">
+                <form action="https://formspree.io/f/mreegkep" method="post" class="contact-form" id="contact-form" >
+                     <div class="form-row">
                         <div class="form-group">
                             <label for="name">Your Name</label>
                             <input type="text" id="name" name="name" required>
@@ -523,16 +524,6 @@
                             </select>
                         </div>
                     </div>
-                    <!-- <div class="form-group">
-                        <label for="budget">Budget Range</label>
-                        <select id="budget" name="budget">
-                            <option value="">Select your budget</option>
-                            <option value="5k">$1,000 - $5,000</option>
-                            <option value="10k">$5,000 - $10,000</option>
-                            <option value="25k">$10,000 - $25,000</option>
-                            <option value="50k">$25,000+</option>
-                        </select>
-                    </div> -->
                     <div class="form-group">
                         <label for="message">Your Message</label>
                         <textarea id="message" name="message" placeholder="Tell me about your project..." required></textarea>
@@ -918,6 +909,42 @@
                 btn.style.transform = 'translate(0px, 0px)';
             });
         });
+
+        const form = document.getElementById("contact-form");
+
+form.addEventListener("submit", async (event) => {
+    event.preventDefault(); // Stop the page from refreshing
+    
+    const status = document.querySelector(".submit-btn span");
+    const data = new FormData(event.target);
+    
+    status.innerText = "Sending...";
+
+    try {
+        const response = await fetch(event.target.action, {
+            method: 'POST',
+            body: data,
+            headers: {
+                'Accept': 'application/json'
+            }
+        });
+
+        const result = await response.json();
+
+        if (response.ok) {
+            status.innerText = "Message Sent!";
+            form.reset();
+        } else {
+            // This will tell us EXACTLY what Formspree doesn't like
+            console.error("Formspree Error:", result);
+            status.innerText = "Error: Check Console";
+            alert("Submission failed: " + (result.errors ? result.errors[0].message : "Unknown error"));
+        }
+    } catch (error) {
+        console.error("Network Error:", error);
+        status.innerText = "Network Error";
+    }
+});
     </script>
 </body>
 </html>
